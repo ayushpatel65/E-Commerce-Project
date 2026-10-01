@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone - E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">ShopZone</div>
+
+        <div class="cart">
+            🛒 Cart <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h1>Welcome to ShopZone</h1>
+            <p>Simple. Smart. Shopping.</p>
+        </section>
+
+        <section class="products-section">
+
+            <h2>Our Products</h2>
+            <div class="filters">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Search products..."
+        onkeyup="filterProducts()"
+    >
+
+    <select id="category" onchange="filterProducts()">
+
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="accessories">Accessories</option>
+
+    </select>
+
+</div>
+
+            <div class="products" id="products">
+
+            
+            </div>
+
+        </section>
+
+        <section class="cart-section">
+
+            <h2>Shopping Cart</h2>
+
+            <div id="cart-items">
+                <p class="empty-cart">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-total">
+                <h3>Total: ₹<span id="total">0</span></h3>
+                <button onclick="clearCart()" class="clear-btn">
+                    Clear Cart
+                </button>
+            </div>
+
+            <div class="checkout">
+
+    <h2>Checkout</h2>
+
+    <input
+        type="text"
+        id="customer-name"
+        placeholder="Enter your name"
+    >
+
+    <input
+        type="email"
+        id="customer-email"
+        placeholder="Enter your email"
+    >
+
+    <input
+        type="text"
+        id="customer-address"
+        placeholder="Enter your address"
+    >
+
+    <button onclick="placeOrder()">
+        Place Order
+    </button>
+
+</div>
+
+<div id="order-message"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 ShopZone | Industry Practice Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
