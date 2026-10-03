@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,104 +10,185 @@
 
 <body>
 
-    <header>
-        <div class="logo">Buyora</div>
+<header class="navbar">
 
-        <div class="cart">
-            🛒 Cart <span id="cart-count">0</span>
+    <div class="logo">
+        <span class="logo-main">B</span>
+        <span class="logo-text">UYORA</span>
+        <div class="logo-line"></div>
+    </div>
+
+    <div class="cart-area">
+        🛒 Cart <span id="cart-count">0</span>
+    </div>
+
+</header>
+
+
+<section class="welcome">
+
+    <div class="welcome-content">
+
+        <p class="welcome-small">WELCOME TO</p>
+
+        <h1>
+            Discover More.<br>
+            <span>Choose Better.</span>
+        </h1>
+
+        <p class="slogan">
+            Everything you want, just a click away.
+        </p>
+
+        <button
+            class="explore-btn"
+            onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+            Explore Products ↓
+        </button>
+
+    </div>
+
+
+    <div class="welcome-decoration">
+
+        <div class="floating-circle circle-one"></div>
+        <div class="floating-circle circle-two"></div>
+
+        <div class="hero-cart">
+
+            <div class="cart-handle"></div>
+
+            <div class="cart-body">
+
+                <div class="cart-product product-one">
+                    <div class="product-label">BUY</div>
+                </div>
+
+                <div class="cart-product product-two">
+                    <div class="product-label">ORA</div>
+                </div>
+
+                <div class="cart-product product-three">
+                    <div class="product-label">+</div>
+                </div>
+
+            </div>
+
+            <div class="cart-bottom"></div>
+
+            <div class="cart-wheel wheel-one"></div>
+            <div class="cart-wheel wheel-two"></div>
+
         </div>
-    </header>
 
-    <main>
+    </div>
 
-        <section class="hero">
-            <h1>Welcome to Buyora</h1>
-            <p>Simple. Smart. Shopping.</p>
-        </section>
+</section>
 
-        <section class="products-section">
 
-            <h2>Our Products</h2>
-            <div class="filters">
+<main>
 
-    <input
-        type="text"
-        id="search"
-        placeholder="Search products..."
-        onkeyup="filterProducts()"
-    >
+<section id="shop" class="shop-section">
 
-    <select id="category" onchange="filterProducts()">
+    <h2>Explore Our Products</h2>
 
-        <option value="all">All Categories</option>
-        <option value="electronics">Electronics</option>
-        <option value="accessories">Accessories</option>
+    <p class="shop-subtitle">
+        Find something you'll love.
+    </p>
 
-    </select>
+    <div class="filters">
 
-</div>
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+            onkeyup="filterProducts()"
+        >
 
-            <div class="products" id="products">
+        <select
+            id="category"
+            onchange="filterProducts()"
+        >
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="accessories">Accessories</option>
+        </select>
 
-            
-            </div>
+    </div>
 
-        </section>
+    <div class="products" id="products">
+    </div>
 
-        <section class="cart-section">
+</section>
 
-            <h2>Shopping Cart</h2>
 
-            <div id="cart-items">
-                <p class="empty-cart">Your cart is empty.</p>
-            </div>
+<section class="cart-section">
 
-            <div class="cart-total">
-                <h3>Total: ₹<span id="total">0</span></h3>
-                <button onclick="clearCart()" class="clear-btn">
-                    Clear Cart
-                </button>
-            </div>
+    <h2>Shopping Cart</h2>
 
-            <div class="checkout">
+    <div id="cart-items">
+        <p class="empty-cart">Your cart is empty.</p>
+    </div>
 
-    <h2>Checkout</h2>
+    <div class="cart-total">
 
-    <input
-        type="text"
-        id="customer-name"
-        placeholder="Enter your name"
-    >
+        <h3>
+            Total: ₹<span id="total">0</span>
+        </h3>
 
-    <input
-        type="email"
-        id="customer-email"
-        placeholder="Enter your email"
-    >
+        <button onclick="clearCart()" class="clear-btn">
+            Clear Cart
+        </button>
 
-    <input
-        type="text"
-        id="customer-address"
-        placeholder="Enter your address"
-    >
+    </div>
 
-    <button onclick="placeOrder()">
-        Place Order
-    </button>
 
-</div>
+    <div class="checkout">
 
-<div id="order-message"></div>
+        <h2>Checkout</h2>
 
-        </section>
+        <input
+            type="text"
+            id="customer-name"
+            placeholder="Enter your name"
+        >
 
-    </main>
+        <input
+            type="email"
+            id="customer-email"
+            placeholder="Enter your email"
+        >
 
-    <footer>
-        <p>© 2026 Buyora | Industry Practice Project</p>
-    </footer>
+        <input
+            type="text"
+            id="customer-address"
+            placeholder="Enter your address"
+        >
 
-    <script src="script.js"></script>
+        <button onclick="placeOrder()">
+            Place Order
+        </button>
+
+    </div>
+
+
+    <div id="order-message"></div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Buyora | Industry Practice Project
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
